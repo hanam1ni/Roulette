@@ -1,0 +1,278 @@
+body{
+	background-color: #222;
+}
+
+@font-face {
+	font-family: "Homestead-Display";
+	src: url("../static/Homestead-Display.ttf");
+}
+
+@font-face {
+	font-family: "Chunkfive";
+	src: url("../static/Chunkfive.otf");
+}
+
+@font-face {
+	font-family: "Lato-Regular";
+	src: url("../static/Lato-Regular.ttf");
+}
+
+#container{
+	padding: 20px;
+}
+
+#containTool{
+	position: fixed;
+	height: 200px;
+	width: 400px;
+	box-sizing: border-box;
+	background-color: #ecf0f1;
+	font-family: "Lato-Regular";
+	top: 30px;
+	left: 30px;
+	text-align: center;
+	border-radius: 2px;
+}
+
+#headTool{
+	height: 50px;
+	width: 400px;
+	padding: 14px;
+	box-sizing: border-box;
+	background-color: #7f8c8d;
+	font-size: 22px;
+	color: white;
+}
+
+#containForm{
+	width: 360px;
+	height: 70px;
+	padding: 20px 10px;
+	box-sizing: border-box;
+	font-size: 18px;
+	font-weight: 800;
+	color: black;
+}
+
+#itemSelect{
+	height: 30px;
+	border-radius: 5px;
+	border: 0px;
+	font-family: "Lato-Regular";
+	font-size: 16px;
+	font-weight: 800;
+}
+
+#itemInput{
+	height: 30px;
+	width: 150px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: 0px;
+	font-family: "Lato-Regular";
+	font-size: 16px;
+	font-weight: 800;
+}
+
+#btnSubmit{
+	width: 100px;
+	height: 50px;
+	border-radius: 5px;
+	border: 0;
+	padding: 10px;
+	font-weight: 600;
+	font-size: 20px;
+	color: white;
+	background-color: #3498db;
+	box-shadow: 0 4px #2980b9;
+	transition-duration: 0.4s;
+}
+
+#btnSubmit:hover{
+	background-color: #fd7596;
+	box-shadow: 0 4px #af405b;
+}
+
+#btnSubmit:active{
+	background-color: #b13a57;
+	box-shadow: 0 4px #af405b;
+}
+
+#containWheel {
+	position: relative;
+    height: 800px;
+    width: 800px;
+    box-sizing: border-box;
+    margin: 0 auto; 
+}
+
+#frameWheel {
+	height: 512px;
+	width: 512px;
+    content: "";
+    position: absolute;
+    display: flex;
+  	justify-content: center;
+    top: 154px;
+    left: 154px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 20px;
+    border-radius: 532px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+#pinWheel{
+	height: 150px;
+	width: 150px;
+	position: relative;
+	align-self: center;
+    border-width: 20px;
+    border-radius: 150px;
+    box-sizing: border-box;
+    background-image: url('../static/dice.png');
+    background-size: 100%;
+    background-color: #e74c3c;
+    transition-duration: 0.3s;
+    box-shadow: 0px 0px 36px 8px rgba(0,0,0,0.75);
+}
+
+#pinWheel:hover{
+	background-color: #bdc3c7;
+}
+
+#pinWheel:active{
+	background-color: #c0392b;
+}
+
+#arrowWheel{
+	position: absolute;
+	top: -110px;
+	left: 65px;
+	margin: 0 auto;
+	width: 0px;
+	height: 0px;
+    border-style: solid;
+    border-width: 60px 10px;
+    border-color: transparent transparent #2c3e50 transparent;
+    z-index: -1;
+    transform-origin: bottom left;
+    
+}
+
+#itemwheel{
+	height: 512px;
+	width: 512px;
+	position: absolute;
+    top: 174px;
+    left: 174px;
+	
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+	100%{transform:rotate(2160deg)};
+}
+
+@keyframes arrowspin{
+	0%{transform:rotate(0deg);}
+	10%{transform:rotate(10deg);}
+	25%{transform:rotate(-10deg);}
+	50%{transform:rotate(5deg);}
+	75%{transform:rotate(-15deg);}
+	90%{transform:rotate(0deg);}
+	100%{transform:rotate(0deg);}
+}
+
+#itemWheel span {
+    position: absolute;
+    width: 0px;
+	height: 0px;
+    left: 186px;
+    border-style: solid;
+    border-width: 257px 70px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: none;
+}
+#itemWheel span p{
+	position: relative;
+	top: -240px;
+	left: -25px;
+	
+}
+
+.item{
+	position: relative;
+	top: -230px;
+	left: -35px;
+	width: 70px;
+	height: 120px;
+	text-align: center;
+	z-index: 5;
+	font-family: "Homestead-Display";
+	font-size: 16px;
+	color: white;
+	overflow:hidden;
+	text-overflow: ellipsis; 
+}
+
+#itemWheel span.color1 {
+    transform: rotate(0deg);
+    border-color: #2ecc71 transparent transparent transparent;
+}
+#itemWheel span.color2 {
+    transform: rotate(30deg);
+    border-color: #3498db transparent transparent transparent;
+}
+#itemWheel span.color3 {
+    transform: rotate(60deg);
+    border-color: #f1c40f transparent transparent transparent;
+}
+#itemWheel span.color4 {
+    transform: rotate(90deg);
+    border-color: #e74c3c transparent transparent transparent;
+}
+#itemWheel span.color5 {
+    transform: rotate(120deg);
+    border-color: #f1c40f transparent transparent transparent;
+}
+#itemWheel span.color6 {
+    transform: rotate(150deg);
+    border-color: #16a085 transparent transparent transparent;
+}
+#itemWheel span.color7 {
+    transform: rotate(180deg);
+    border-color: #2980b9 transparent transparent transparent;
+}
+#itemWheel span.color8 {
+    transform: rotate(210deg);
+    border-color: #d35400 transparent transparent transparent;
+}
+#itemWheel span.color9 {
+    transform: rotate(240deg);
+    border-color: #c0392b transparent transparent transparent;
+}
+#itemWheel span.color10 {
+    transform: rotate(270deg);
+    border-color: #3498db transparent transparent transparent;
+}
+#itemWheel span.color11 {
+    transform: rotate(300deg);
+    border-color: #2ecc71 transparent transparent transparent;
+}
+#itemWheel span.color12 {
+    transform: rotate(330deg);
+    border-color: #f1c40f transparent transparent transparent;
+}
+
+#prizeMessage{
+	display: table;
+	margin: 0 auto;
+	font-family: "Chunkfive";
+	font-size: 40px;
+	color: white;
+}
+
+
